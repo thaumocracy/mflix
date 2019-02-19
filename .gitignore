@@ -1,2 +1,4 @@
 **/*.bson.gz
 **/*.json.gz
+node_modules
+.env

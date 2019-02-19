@@ -10,17 +10,22 @@
     "changestream:update": "node test/lessons/change-updates.js",
     "changestream:insert": "node test/lessons/change-insert.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
   "lint-staged": {
     "*.js": [
       "prettier --write",
       "eslint --fix",
       "npm test",
       "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-1"
+    ],
+    "plugins": [
+      "transform-runtime"
     ]
   },
   "keywords": [],
